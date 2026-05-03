@@ -1,8 +1,9 @@
 # 🛡️ **SmartSurv: Advanced AI-Powered Intelligent Surveillance Ecosystem**
 
 **SmartSurv** is a high-performance, autonomous security ecosystem designed to transform legacy CCTV infrastructures into an intelligent, proactive monitoring network. By leveraging **Distributed Edge Computing**, **Multimodal AI (CLIP + FaceNet + YOLO)**, **Real-Time Computer Vision**, and a **Premium Modern Web Architecture**, SmartSurv provides instant situational awareness and threat detection across distributed camera nodes.
-![image](frontend/public/frontend.png)
+
 ---
+![image](frontend/public/frontend.png)
 
 ## 🧠 **Next-Generation AI Capabilities**
 
