@@ -1,39 +1,27 @@
 {
-  "name": "frontend",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "final-year-project",
+  "version": "1.0.0",
+  "description": "SmartSurv is a next-gen AI surveillance system designed to transform traditional CCTV setups into **proactive**, **intelligent**, and **automated** security networks.\r Instead of humans staring at dozens of screens, SmartSurv does the heavy lifting — detecting illegal activities, identifying threats, and tracking individuals across multiple cameras in real time.",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && uvicorn main:app --reload"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alihassanml/SmartSurv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alihassanml/SmartSurv/issues"
+  },
+  "homepage": "https://github.com/alihassanml/SmartSurv#readme",
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.1",
-    "framer-motion": "^12.38.0",
-    "jspdf": "^4.2.1",
-    "lucide-react": "^0.577.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-is": "^19.2.5",
-    "react-router-dom": "^7.13.1",
-    "recharts": "^3.8.1",
-    "tailwindcss": "^4.2.1",
-    "vosk-browser": "^0.0.8"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.4",
-    "@types/node": "^24.12.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.0",
-    "eslint": "^9.39.4",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
-    "globals": "^17.4.0",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.56.1",
-    "vite": "^8.0.0"
+    "concurrently": "^9.2.1",
+    "react-is": "^19.2.5"
   }
 }
