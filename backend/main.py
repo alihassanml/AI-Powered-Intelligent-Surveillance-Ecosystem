@@ -26,6 +26,7 @@ import string
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
+from playsound import playsound
 
 load_dotenv()
 
@@ -367,6 +368,17 @@ async def lifespan(app: FastAPI):
 
     # User must explicitly start monitoring from the UI.
     print("SMARTSURV_READY. System idle.")
+
+    # Play startup sound
+    try:
+        sound_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'sound', 'start.mp3'))
+        if os.path.exists(sound_path):
+            playsound(sound_path)
+            print(f"[Audio] Startup sound played: {sound_path}")
+        else:
+            print(f"[Audio] Startup sound not found: {sound_path}")
+    except Exception as e:
+        print(f"[Audio] Failed to play startup sound: {e}")
 
     # Start the background tasks
     asyncio.create_task(alert_broadcaster())
